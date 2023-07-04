@@ -16,6 +16,7 @@ public class SoundSystemMixin {
     @Inject(method = "play(Lnet/minecraft/client/sound/SoundInstance;)V", at = @At("RETURN"))
     public void play(SoundInstance sound, CallbackInfo ci) {
         if (sound == null || sound.getSound() == null) return;
+        if (SoundHelper.isBlocked(sound)) return;
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player == null) return;
         client.player.sendMessage(Text.of(
