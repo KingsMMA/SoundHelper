@@ -14,6 +14,6 @@ Volume and pitch can be bypassed with negative values.
 
 If all values are excluded / bypassed, no sounds will be logged.
 
-### /unblock_sounmd <sound> <volume> <pitch>
+### /unblock_sound <sound> <volume> <pitch>
 Unblocks the sound combination provided.  
 Acts as a reverse of `/block_sound`, with the arguments matching the same conditions.
