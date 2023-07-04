@@ -13,10 +13,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(SoundSystem.class)
 public class SoundSystemMixin {
 
-    @Inject(method = "play(Lnet/minecraft/client/sound/SoundInstance;)V", at = @At("RETURN"))
-    public void play(SoundInstance sound, CallbackInfo ci) {
+    @Inject(method = "play(Lnet/minecraft/client/sound/SoundInstance;)V", at = @At("RETURN"), cancellable = true)
+    public void play(SoundInstance sound, CallbackInfo cir) {
         if (sound == null || sound.getSound() == null) return;
-        if (SoundHelper.isBlocked(sound)) return;
+        if (SoundHelper.isBlocked(sound)) {
+            cir.cancel();
+            return;
+        }
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player == null) return;
         client.player.sendMessage(Text.of(
