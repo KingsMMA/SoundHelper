@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "soundhelper",
+  "version": "${version}",
+  "name": "SoundHelper",
+  "description": "",
+  "authors": [
+    "KingsDev"
+  ],
+  "contact": {
+    "website": "https://kingrabbit.dev/"
+  },
+  "license": "MIT",
+  "icon": "assets/soundhelper/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.kingrabbit.soundhelper.SoundhelperClient"
+    ]
+  },
+  "mixins": [
+    "soundhelper.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "1.19.4"
+  }
+}
