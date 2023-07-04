@@ -9,7 +9,7 @@ No arguments required.
 
 ### /block_sound <sound> <volume> <pitch>
 Blocks all sounds that match the given combination.  
-Sound is the only required argument, although it can be bypassed with a value of `none` or `null.`  
+Sound is the only required argument, although it can be bypassed with a value of `none` or `null`.  
 Volume and pitch can be bypassed with negative values.
 
 If all values are excluded / bypassed, no sounds will be logged.
