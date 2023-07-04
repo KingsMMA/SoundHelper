@@ -12,7 +12,7 @@ Blocks all sounds that match the given combination.
 Sound is the only required argument, although it can be bypassed with a value of `none` or `null`.  
 Volume and pitch can be bypassed with negative values.
 
-If all values are excluded / bypassed, no sounds will be logged.
+If all values are excluded / bypassed, no sounds will be logged or played.
 
 ### /unblock_sound <sound> <volume> <pitch>
 Unblocks the sound combination provided.  
